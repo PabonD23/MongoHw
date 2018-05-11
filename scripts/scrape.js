@@ -3,7 +3,7 @@
 
  var scrape = function (cb) {
 
-     request("http://nttimes.com", function(err,res, body){
+     request("http://nytimes.com", function(err,res, body){
 
         var $ = cheerio.load(body);
 

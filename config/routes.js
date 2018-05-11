@@ -16,7 +16,7 @@ module.exports = function(router) {
 
     router.get("/api/fetch", function(req , res){
         headLinesController.fetch(function(err, docs){
-            if (!docs || docs.insertedCount === 0){
+            if  (!docs || docs.insertedCount === 0){
                 res.json({
                     message: "No new articles today.Check back tomorrow!"
                 });
@@ -27,4 +27,11 @@ module.exports = function(router) {
             }
         });
     });
+
+    router.get("/api/headlines", function(req, res){
+        var query = {};
+        if(req.query.saved){
+            query = req.query;
+        }
+    })
 } 
