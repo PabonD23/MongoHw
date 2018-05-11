@@ -20,7 +20,7 @@ Developed during a rigorous Coding Bootcamp. The condtions of this homework was 
     
 
 
-## What Each Command Does
+## What Does Each Tab Do
 
 1. `Home`
 

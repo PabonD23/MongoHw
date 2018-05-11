@@ -9,6 +9,8 @@ var app = express();
 
 var router = express.Router();
 
+require("./config/routes")(router);
+
 app.use(express.static(__dirname + "/public"));
 
 app.engine("handlebars", expressHandlebars({ defaultLayout: "main" }));
@@ -22,7 +24,7 @@ var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 mongoose.connect(db, function(error){
     if(error){
-        console.og(error);
+        console.log(error);
     }else{
         console.log("mongoose connection is successful");
     }
